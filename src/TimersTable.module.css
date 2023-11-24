@@ -1,0 +1,14 @@
+.timer-table{
+    margin-top: 3rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.timer-table th, .timer-table td{
+    padding: .5rem;
+    text-align: left;
+}
+
+.timer-table th{
+    border-bottom: 1px solid black;
+}
