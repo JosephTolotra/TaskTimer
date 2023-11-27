@@ -1,13 +1,16 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Clock from "./Clock.js";
 import style from "./Timer.module.css";
 import TimerText from "./TimerText.js"
 //  import Button from "./Button.js";
 import TaskForm from "./TaskForm.js";
+import { TaskContexte } from "./context/tasks.js";
 
 let timerId;
 
 function Timer(props){
+
+    const {addTask}= useContext(TaskContexte);
     let [time, setTime]=useState(0);
     const [isTimerStarted, setisTimerStarted]=useState(false);
    // let timerId;//Tsy mety vao atao ato ny timerId noho le setInterval
@@ -24,7 +27,13 @@ function Timer(props){
         }
         else{
            
-            props.saveTime(time, title, description);
+            // props.saveTime(time, title, description);
+            addTask({
+                time: time,
+                date: new Date(),
+                title,
+                description
+            });
             clearInterval(timerId); 
             setisTimerStarted(false);
             setTime(0);

@@ -1,0 +1,17 @@
+[33mcommit 3261001a3a494c172322bb6a7991db181197c59d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: JosephTolotra <tolotraadr@gmail.com>
+Date:   Mon Nov 27 07:38:45 2023 +0100
+
+    avec contexte et appuyé sur Timer mais pas sur Task
+
+[33mcommit 35026cafdfb3f5bf29b983d49824c61c031293ab[m
+Author: JosephTolotra <tolotraadr@gmail.com>
+Date:   Mon Nov 27 07:05:02 2023 +0100
+
+    avec contexte
+
+[33mcommit 6acef5f656bf15d46f93532639888d6a8f7b387a[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: JosephTolotra <tolotraadr@gmail.com>
+Date:   Fri Nov 24 07:21:38 2023 +0100
+
+    Timer sans contexte

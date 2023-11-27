@@ -1,8 +1,11 @@
-import { useMemo, useRef } from "react";
+import { useContext, useMemo, useRef } from "react";
 import Clock from "./Clock";
 import style from "./TimersTable.module.css";
-function TimersTable({removeTask,...props}){
+import { TaskContexte } from "./context/tasks";
+function TimersTable(props){
 
+    const {removeTask} = useContext(TaskContexte);
+    // console.log(tasks);
     const timersRef=useRef(null);
 
     const addTimerRef=(element)=>{
@@ -20,7 +23,6 @@ function TimersTable({removeTask,...props}){
             <th>Description</th>
             <th>Temps</th>
             <th></th>
-            {console.log("azerty")}
             
         </tr>
         );
@@ -36,7 +38,7 @@ function TimersTable({removeTask,...props}){
                 </thead>
                 <tbody>
                         {
-                            props.timers.map((time, index)=>(
+                            props.tasks.map((time, index)=>(
                                 // <tr ref={addTimerRef} key={time.date.getMilliseconds()}>
 
                                 
