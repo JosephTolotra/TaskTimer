@@ -12,3 +12,13 @@
     font-size: 3rem;
     font-weight: 600;
 }
+
+.dark{
+    background: linear-gradient(to bottom, rgb(30, 30, 31),rgb(5, 5, 5) );
+    color: antiquewhite;
+}
+
+.light{
+    background-color: beige;
+    color: black;
+}

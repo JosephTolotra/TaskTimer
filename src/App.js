@@ -1,7 +1,8 @@
-import { useState, useTransition } from 'react';
+import { useContext, useState, useTransition } from 'react';
 import Timer from './Timer.js';
 import TimersTable from './TimerTable.js';
 import style from './App.module.css';
+import { ThemeContexte } from './context/theme.js';
 
 const generateALotOfTask=()=>{
   const ALotOfTask=[];
@@ -21,6 +22,7 @@ const aLotOfTimer=generateALotOfTask();
 
 function App() {
 
+  const{theme, toogleTheme} =useContext(ThemeContexte);
   const [timers, setTimers]=useState(aLotOfTimer);
   // let timers=[
   //   {
@@ -67,8 +69,9 @@ function App() {
 }
  
   return (
-    <div className={style.container}>
+    <div className={`${style.container} ${style[theme]}`}>
       <h1 className={style['main-title']}>Chronométrage de tâche</h1>
+      <button onClick={toogleTheme}>Theme mode</button>
       <Timer saveTime={saveTime}/>
       <input type='search' onChange={(e)=>{onSearch(e.target.value)}} placeholder="Rechercher des tâches"/>
       {isPending && <p>loading...</p>}
