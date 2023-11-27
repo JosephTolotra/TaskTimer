@@ -9,7 +9,7 @@ const ThemeContexte=createContext(
 
 export {ThemeContexte};
 
-const ThemeContexteProvider=({childreen})=>{
+const ThemeContexteProvider=({children})=>{
 
 const [theme, setTheme]=useState('light');
 
@@ -22,7 +22,7 @@ const value ={
 };
     return(
         <ThemeContexte.Provider value={value}>
-            {childreen}
+            {children}
         </ThemeContexte.Provider>
     );
 }
