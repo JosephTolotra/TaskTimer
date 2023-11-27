@@ -12,14 +12,7 @@ function App() {
 
   const{ searchTasks} = useContext(TaskContexte);
   const{theme, toogleTheme} =useContext(ThemeContexte);
-  // const [timers, setTimers]=useState(aLotOfTimer);
-  // let timers=[
-  //   {
-  //     date: new Date(),
-  //     time: 234,
-  //   }
-  // ];
-//   
+  
 
 const [searchValue, setSearchValue]=useState('');    
 const [isPending, startTransition]=useTransition();
